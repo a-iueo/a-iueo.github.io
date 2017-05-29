@@ -1,0 +1,130 @@
+<html>
+<head>
+  <title>Cara Kerja Inference Engine pada Expert System - Tugas 1 Artikel Ca-GaIB Edwin Rachman 13515042</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <style>
+    body {
+      position: relative;
+    }
+    .container-fluid {
+      padding-top: 25px;
+      padding-bottom: 25px;
+      height: auto;
+      color: #fff; 
+    }
+    #header {
+      background-color: Black;
+    }
+    #expert-system {
+      background-color: RoyalBlue;
+    }
+    #knowledge-base {
+      background-color: #2251dd;
+    }
+    #inference-engine {
+      background-color: #006868;
+    }
+    #proses-inferensi {
+      background-color: Teal;
+    }
+    #match-rules {
+      background-color: Brown;
+    }
+    #select-rules {
+      background-color: OliveDrab;
+    }
+    #execute-rules {
+      background-color: #18399a;
+    }
+    #metode-inferensi {
+      background-color: Teal;
+    }
+    #forward-chaining {
+      background-color: DarkOrchid;
+    }
+    #backward-chaining {
+      background-color: DarkOrange;
+    }
+    #caption {
+      text-align: right;
+    }
+    
+    img {
+      float: right;
+      width: 300px;
+      margin: 0px 0px 10px 10px;
+    }
+    
+    p {
+      font-size: 16px;
+    }
+    a {
+      color: Yellow;
+      font-weight: bold;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div id="header" class="container-fluid">
+    <h2>Cara Kerja Inference Engine pada Expert System</h2>
+    <div id="caption">Edwin Rachman (NIM 13515042)</div>
+  </div>
+  <div id="expert-system" class="container-fluid">
+    <h3>Expert System</h3>
+    <img src="expert_system.jpg">
+    <p>Sebuah expert system adalah sebuah sistem komputer yang mengemulasikan kemampuan pengambilan keputusan seorang pakar (atau expert) dalam domain bidang tertentu.</p>
+    <p>Expert system dibuat untuk menyelesaikan permasalahan-permasalahan kompleks menggunakan knowledge reasoning berdasarkan aturan-aturan dan fakta-fakta tanpa kode prosedural yang konvensional.</p>
+    <p>Expert system terbagi atas dua subsistem, yaitu: <a href="#knowledge-base">knowledge base</a> dan <a href="#inference-engine">inference engine</a>.</p>
+  </div>
+  <div id="knowledge-base" class="container-fluid">
+    <h3>Knowledge Base</h3>
+    <p>Sebuah knowledge base adalah kumpulan fakta-fakta mengenai domain bidang tertentu dan aturan-aturan yang berhubungan sehingga dapat memproduksi fakta-fakta baru.</p>
+  </div>
+  <div id="inference-engine" class="container-fluid">
+    <h3>Inference Engine</h3>
+    <p>Sebuah inference engine adalah alat atau program komputer yang mengaplikasikan aturan-aturan logika pada fakta-fakta pada <a href="#knowledge-base">knowledge base</a> sehingga dihasilkan fakta-fakta yang baru.</p>
+    <p>Cara kerja suatu inference engine mengikuti <a href="#proses-inferensi">proses inferensi</a> dan tergantung <a href="#metode-inferensi">metode inferensi</a> yang digunakannya.</p>
+  </div>
+  <div id="proses-inferensi" class="container-fluid">
+    <h3>Proses Inferensi</h3>
+    <p>Proses inferensi pada inference engine berjalan dalam tiga langkah yang berurutan dan bersiklus, yaitu: <a href="#match-rules">match rules</a>, <a href="#select-rules">select rules</a>, dan <a href="#execute-rules">execute rules</a>.</p>
+  </div>
+  <div id="match-rules" class="container-fluid">
+    <h3>Match Rules</h3>
+    <p>Inference engine akan mencari semua aturan-aturan yang sesuai dengan isi <a href="#knowledge-base">knowledge base</a>. Bagian yang disesuaikan adalah kondisinya (bagian kiri) dengan fakta pada <a href="#forward-chaining">forward chaining</a>, atau hasilnya (bagian kanan) dengan goal pada <a href="#backward-chaining">backward chaining</a>. Jika tidak ada aturan yang dapat dipilih, maka proses inferensi berakhir.</p>
+  </div>
+  <div id="select-rules" class="container-fluid">
+    <h3>Select Rules</h3>
+    <p>Inference engine akan mengatur urutan eksekusi aturan-aturan yang telah dipilih pada langkah sebelumnya. Urutan eksekusi sesuai dengan prioritas yang ditentukan oleh algoritma implementasi inference engine.</p>
+  </div>
+  <div id="execute-rules" class="container-fluid">
+    <h3>Execute Rules</h3>
+    <p>Inference engine akan mengeksekusi setiap aturan sesuai dengan urutan yang ditentukan pada langkah sebelumnya. Hal ini akan menyebabkan penambahan fakta-fakta yang baru pada forward chaining, atau goal-goal yang baru pada <a href="#backward-chaining">backward chaining</a>.</p>
+  </div>
+  <div id="metode-inferensi" class="container-fluid">
+    <h3>Metode Inferensi</h3>
+    <p>Terdapat dua metode inferensi yang dapat digunakan oleh inference engine, yaitu <a href="#forward-chaining">forward chaining</a> dan <a href="#backward-chaining">backward chaining</a>.</p>
+  </div>
+  <div id="forward-chaining" class="container-fluid">
+    <h3>Forward Chaining</h3>
+    <img src="forward_chaining.jpg">
+    <p>Fakta-fakta dimasukkan ke dalam <a href="#knowledge-base">knowledge base</a>. Hal ini akan memicu aturan-aturan yang kondisinya sesuai dengan fakta-fakta yang baru. Aturan-aturan ini kemudian dapat menambahkan fakta-fakta yang baru ke dalam knowledge base, sehingga memicu aturan-aturan lagi terhadap data baru tersebut. Pencocokan fakta-fakta dilakukan dengan algoritma Breadth-First-Search dan algoritma Rete untuk optimasi aturan berjumlah banyak.</p>
+    <p>Forward chaining juga disebut sebagai inferensi data-directed, karena proses inferensi dipicu oleh masuknya fakta-fakta baru ke dalam knowledge base.</p>
+    <p>Inference engine dengan forward chaining biasa dibuat menggunakan bahasa LISP.</p>
+  </div>
+  <div id="backward-chaining" class="container-fluid">
+    <h3>Backward Chaining</h3>
+    <img src="backward_chaining.jpg">
+    <p>Inference engine ingin mengetahui kebenaran suatu goal. Inference engine kemudian akan mencari aturan-aturan yang hasilnya sesuai dengan goal tersebut. Sebelum aturan-aturan tersebut dapat digunakan, inference engine harus menguji kondisinya terlebih dahulu. Hal ini akan menyebabkan pencarian kebenaran goal-goal yang baru. Pencocokan goal-goal dilakukan dengan algoritma Depth-First-Search dan algoritma backtracking yang biasa diimplementasikan secara rekursif.</p>
+    <p>Backward chaining juga disebut sebagai inferensi goal-directed atau hypothesis-driven, karena proses inferensi hanya dilakukan saat inference engine ingin membuktikan kebenaran suatu goal.</p>
+    <p>Inference engine dengan forward chaining biasa dibuat menggunakan bahasa Prolog.</p>
+  </div>
+  
+</body>
+</html>
